@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TabbedPageTest.Materia"
+             Title="Matter"
+             IconImageSource="img3.png">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image Source="mat.png" WidthRequest="250" HeightRequest="250"></Image>
+            <Label Text="Welcome to Matter!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+
+            <ListView x:Name="materias" />
+
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

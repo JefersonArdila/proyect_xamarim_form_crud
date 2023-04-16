@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TabbedPageTest.Alumnos"
+             Title="Student"
+             IconImageSource="img1.png">
+
+    <ContentPage.Content>
+        <StackLayout Margin="0,50">
+
+            <Image Source="alumno.png" WidthRequest="150" HeightRequest="150"></Image>
+
+            <Label Text="Welcome Student!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Label Text="student registration"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand" />
+            <Entry x:Name="txtIdAlumno" IsVisible="False"/>
+            <Entry x:Name="txtNombre" Placeholder="Name" />
+            <Entry x:Name="txtApellidos" Placeholder="Last Name" />
+            <Entry x:Name="txtEdad" Placeholder="Years old" />
+            <Entry x:Name="txtEmail" Placeholder="Email" />
+            <Button x:Name="btnRegistrar" Text="Register student" Clicked="btnRegistrar_Clicked"/>
+            <Button x:Name="btnActualizar" Text="Update" Clicked="btnActualizar_Clicked" IsVisible="False"/>
+            <Button x:Name="btnEliminar" Text="Eliminate" Clicked="btnEliminar_Clicked" IsVisible="False"/>
+
+            <ListView x:Name="lstAlumnos" ItemSelected="lstAlumnos_ItemSelected">
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+
+                                </Grid.ColumnDefinitions>
+
+                                <Label Text="{Binding IdAlumno}" Grid.Row="0" Grid.Column="0" TextColor="Blue"/>
+                                <Label Text="{Binding Nombre}" Grid.Row="0" Grid.Column="1" TextColor="Gray"/>
+                                <Label Text="{Binding Apellidos}" Grid.Row="0" Grid.Column="2" TextColor="Gray"/>
+                                <Label Text="{Binding Edad}" Grid.Row="0" Grid.Column="3" TextColor="Orange"/>
+                                <Label Text="{Binding Email}" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" TextColor="Green"/>
+
+
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
