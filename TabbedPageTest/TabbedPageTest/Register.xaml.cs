@@ -115,9 +115,23 @@ namespace TabbedPageTest
         async void Continue_Tapped(object sender, EventArgs e)
         {
             if (await validarFormulario())
+
             {
                 await DisplayAlert("Exito", "Todos tus campos cumplieron las validaciones.", "OK");
+                LimpiarControles();
+
             }
+        }
+
+        public void LimpiarControles()
+        {
+            UserName.Text = "";
+            UserLastName.Text = "";
+            Password.Text = "";
+            UserEmail.Text = "";
+            UserCelular.Text = "";
+
+
         }
     }
 }

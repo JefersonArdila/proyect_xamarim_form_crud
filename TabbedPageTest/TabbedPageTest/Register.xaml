@@ -20,8 +20,8 @@
                         <ColumnDefinition Width="45*" />
                     </Grid.ColumnDefinitions>
 
-                    <Entry x:Name="UserName" Grid.Row="0" Grid.Column="0" Placeholder="Nombre" Keyboard="Text" />
-                    <Entry x:Name="UserLastName" Grid.Row="0" Grid.Column="1" Placeholder="Apellido" Keyboard="Text" />
+                    <Entry x:Name="UserName" Grid.Row="0" Grid.Column="0" Placeholder="Name" Keyboard="Text" />
+                    <Entry x:Name="UserLastName" Grid.Row="0" Grid.Column="1" Placeholder="Last Name" Keyboard="Text" />
                     <Entry x:Name="Password" Grid.Row="1" Grid.Column="0" Placeholder="Password"  IsPassword="True" Keyboard="Text" />
 
                 </Grid>
@@ -38,7 +38,7 @@
                     </Grid.ColumnDefinitions>
 
                     <Entry x:Name="UserEmail"  Grid.Row="0" Grid.Column="0" Placeholder="Email" Keyboard="Email" />
-                    <Entry x:Name="UserCelular" Grid.Row="1" Grid.Column="0" Placeholder="Teléfono" Keyboard="Telephone" MaxLength="10" />
+                    <Entry x:Name="UserCelular" Grid.Row="1" Grid.Column="0" Placeholder="Phone" Keyboard="Telephone" MaxLength="10" />
 
                 </Grid>
 

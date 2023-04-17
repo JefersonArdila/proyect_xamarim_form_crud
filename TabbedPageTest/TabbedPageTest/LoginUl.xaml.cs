@@ -17,25 +17,28 @@ namespace TabbedPageTest
 
         private void Button_Clicked(object sender, EventArgs e)
         {
-            if(txtUsername.Text=="admin" && txtPassword.Text=="123")
+            if(txtUsername.Text=="jeferson" && txtPassword.Text=="123")
             {
                 
                 this.Navigation.PushModalAsync(new Welcome());
 
-                
+                LimpiarControles();
 
-
-            }
-            else if (txtUsername.Text == "jefer" && txtPassword.Text == "123")
-            {
-
-                this.Navigation.PushModalAsync(new Welcome());
 
 
 
 
             }
-            else if (txtUsername.Text == "manu" && txtPassword.Text == "123")
+            else if (txtUsername.Text == "hazly" && txtPassword.Text == "123")
+            {
+
+                this.Navigation.PushModalAsync(new Welcome());
+
+
+
+
+            }
+            else if (txtUsername.Text == "sara" && txtPassword.Text == "123")
             {
 
                 this.Navigation.PushModalAsync(new Welcome());
@@ -56,6 +59,14 @@ namespace TabbedPageTest
         private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
             this.Navigation.PushModalAsync(new Register());
+        }
+
+        public void LimpiarControles()
+        {
+            txtUsername.Text = "";
+            txtPassword.Text = "";
+
+
         }
 
 
